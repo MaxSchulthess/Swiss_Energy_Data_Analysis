@@ -1,0 +1,21 @@
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore virtual environments
+venv/
+env/
+.venv/
+
+# Ignore Jupyter-related temporary files
+*.ipynb~
+
+# Ignore large or compressed dataset files (if any)
+data/*.zip
+data/*.tar.gz
+data/*.xlsx
