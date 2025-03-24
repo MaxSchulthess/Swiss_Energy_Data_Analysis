@@ -1,0 +1,11 @@
+data:
+  raw_root: "data/raw"
+  output_root: "data/processed"
+
+cleaning:
+  drop_duplicates: true
+  fill_missing: true
+  fill_value: 0
+
+transformation:
+  normalize: false
