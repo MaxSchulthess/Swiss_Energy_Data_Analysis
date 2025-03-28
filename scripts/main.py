@@ -5,7 +5,7 @@ from modules.loader import load_all_csvs
 from modules.cleaner import clean_data
 from modules.transformer import transform_data
 from modules.exporter import save_data
-
+from modules.cleaner import parse_datetime_columns
 
 script_dir = os.path.dirname(__file__)
 config_path = os.path.join(script_dir, "..", "config.yaml")
@@ -20,6 +20,7 @@ def main(config_path):
     output_root = os.path.join(script_dir, "..", config["data"]["output_root"])
 
     for fname, raw_data in load_all_csvs(raw_root):
+        raw_data = parse_datetime_columns(raw_data)
         cleaned = clean_data(raw_data, config["cleaning"])
         transformed = transform_data(cleaned, config["transformation"])
 
