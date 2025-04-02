@@ -9,25 +9,51 @@ The aim is to do an analysis of datasets related to energy (production, consumpt
 noting any observed trends or remarkable observations made.
 
 
-### Setting Up the Virtual Environment
+### 🚀 Initial Setup (First-Time Only)
 
-#### 1. Create the Virtual Environment (Only Needed Once Per System)
-(in bash)
+#### 1️⃣ Install the Virtual Environment
+```bash
 python3 -m venv sklearn-env
+```
 
-#### 2. Activate the Vitrual Environment
+#### 2️⃣ Activate the Virtual Environment
 
-- On Linux/macOS (Bash/Zsh)
+- **Linux/macOS (Bash/Zsh):**
+  ```bash
   source sklearn-env/bin/activate
+  ```
 
-- On Windows (Command Prompt)
-  dklearn-env\Scripts\activate
+- **Windows (Command Prompt):**
+  ```cmd
+  sklearn-env\Scripts\activate
+  ```
 
-- On Windows (Powershell)
+- **Windows (PowerShell):**
+  ```powershell
   .\sklearn-env\Scripts\Activate
+  ```
 
-#### 3. Install Required Packages
+#### 3️⃣ Install Required Packages
+```bash
 pip install -r requirements.txt
+pip install ipykernel
+python -m ipykernel install --user --name=sklearn-env --display-name "Python (sklearn-env)"
+```
 
-#### 4. Deactivate the Virtual Environment
+---
+
+### 🔁 Standard Startup (Every Time You Work on the Project)
+
+#### 1️⃣ Activate the Virtual Environment
+```bash
+source sklearn-env/bin/activate  # Linux/macOS
+# OR
+sklearn-env\Scripts\activate     # Windows
+```
+
+#### 2️⃣ Start Your Work (Jupyter, Scripts, etc.)
+
+#### 3️⃣ Deactivate When Done
+```bash
 deactivate
+```
